@@ -874,13 +874,21 @@ button {
     fill: currentColor;
 }
 
-.btn-hero-close:hover .close-icon {
+.btn-hero-close:hover {
+    color: var(--selection-color);
+}
+
+.btn-hero-close:focus {
+    color: var(--selection-color);
+}
+
+/* .btn-hero-close:hover .close-icon {
     fill: var(--selection-color);
 }
 
 .btn-hero-close:focus .close-icon {
     fill: var(--selection-color);
-}
+} */
 
 /* --------------------Modal-Forms--------------------- */
 
@@ -905,7 +913,7 @@ button {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17px;    
+    line-height: 1.17;    
     letter-spacing: 0.01em;    
     color: #757575;
 }
@@ -942,7 +950,7 @@ button {
     position: absolute;
     left: 12px;
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
 
     transition: fill var(--selection-color);
 }
