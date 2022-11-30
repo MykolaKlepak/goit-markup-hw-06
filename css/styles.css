@@ -60,6 +60,19 @@ button {
     /* outline: 2px solid brown; */
 }
 
+.hide {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
 
 /* --------------------header html---------------------- */
 
@@ -232,19 +245,7 @@ button {
 
 /* --------------------наші цінності---------------------- */
 
-.hide {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important;
-}
+
 
 .section {
     padding: 94px 0;
@@ -988,16 +989,18 @@ button {
 .checkbox-label {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
-    padding-left: 13px;
 
+    position: relative;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;   
     letter-spacing: 0.03em;    
-    color: #757575;
+    color: #757575;    
 }
 
 .checkbox-label span {
@@ -1017,14 +1020,19 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-form:checked + .checkbox-label span {
+.checkbox-form {
+    left: 28px;
+    bottom: 3px;
+}
+
+.checkbox-form:checked + span {
     background-color: var(--selection-color);
     border: none;
     box-shadow: none;
     fill: #FFFFFF;
 }
 
-.checkbox-form:focus + .checkbox-label span {
+.checkbox-form:focus + span {
     border-color: var(--selection-color);
 }
 
